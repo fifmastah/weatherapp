@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+#input-field {
+  border-radius: 30px;
+  border-width: 2px;
+  border-color: #ee0000;
+  border-style: solid;
+  padding: 7px;
+  padding-left: 25px;
+  height: 5px;
+  z-index: -1;
+  font-family: Blinker;
+}
+
+#input-field:focus {
+  outline: 0;
+}
+
+#input-field:hover {
+  box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+#searchicon {
+  z-index: 1;
+  position: relative;
+  right: 65px;
+  top: -19px;
+}
+
+.weather-boxes {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.day {
+  font-family: Blinker;
+  padding: 50px;
+  color: white;
+  border: solid black;
+  border-radius: 20px;
+  border-width: 2px;
+  transform: scale(2, 2);
+}
+
+label {
+  font-weight: bold;
+  font-family: Blinker;
+  padding-bottom: 15px;
+}
+
+.app-content {
+  background-image: url("https://cdn.statically.io/img/codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg?f=webp&w=1440");
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  background-size: cover;
+}
+
+.weather-searchbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(2, 2);
+  margin-top: 25px;
+}
+
+#weathericon {
+  margin: 0 auto;
+  top: 50px;
+  font-size: 40px;
+  position: relative;
+  color: white;
+}
+
+#degree {
+  font-size: 7px;
+  position: relative;
+  left: 67px;
+  top: 60px;
+  color: white;
+}
