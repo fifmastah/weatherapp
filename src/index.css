@@ -31,28 +31,6 @@
   top: -19px;
 }
 
-.weather-boxes {
-  margin-top: 200px;
-  display: flex;
-  justify-content: center;
-}
-
-.day {
-  font-family: Blinker;
-  padding: 50px;
-  color: white;
-  border: solid black;
-  border-radius: 20px;
-  border-width: 2px;
-  transform: scale(2, 2);
-}
-
-label {
-  font-weight: bold;
-  font-family: Blinker;
-  padding-bottom: 15px;
-}
-
 .app-content {
   background-image: url("https://cdn.statically.io/img/codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg?f=webp&w=1440");
   min-width: 100%;
@@ -70,17 +48,44 @@ label {
 }
 
 #weathericon {
-  margin: 0 auto;
-  top: 50px;
-  font-size: 40px;
+  top: 0px;
+  font-size: 60px;
   position: relative;
-  color: white;
+  color: rgb(100, 0, 147);
 }
 
 #degree {
-  font-size: 7px;
+  font-size: px;
   position: relative;
   left: 67px;
   top: 60px;
-  color: white;
+  color: rgb(100, 0, 147);
+}
+
+.weather-box {
+  padding: 90px;
+  border: solid black;
+  border-radius: 20px;
+  margin: 20px;
+}
+.weather-boxes {
+  display: flex;
+  position: relative;
+  top: 315px;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.box-background {
+  background-color: white;
+  height: 650px;
+  border-radius: 50px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.date {
+  position: relative;
+  bottom: 150px;
 }

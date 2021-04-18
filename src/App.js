@@ -13,8 +13,9 @@ function App() {
     if (e.key === "Enter") {
       e.preventDefault();
       console.log("prevented");
-      fetch(`http://api.weatherapi.com/v1/current.json?key=4a269c9bdc8c4b3b93464706212103
-          &q=${weatherValue}&aqi=no`)
+      fetch(
+        `https://api.weatherbit.io/v2.0/forecast/daily?city=${weatherValue}&key=21aa134183484e29af75f9b2368e6177`
+      )
         .then((data) => data.json())
         .then((data) => {
           console.log(data);
@@ -44,9 +45,8 @@ function App() {
         </div>
         <div>
           {acquired && (
-            <div className="weather-boxes">
-              {" "}
-              <Weather myWeather={acquired} />{" "}
+            <div>
+              <Weather myWeather={acquired} />
             </div>
           )}
         </div>
