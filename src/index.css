@@ -48,44 +48,64 @@
 }
 
 #weathericon {
-  top: 0px;
-  font-size: 60px;
-  position: relative;
-  color: rgb(100, 0, 147);
+  top: 60px;
+  font-size: 140px;
+  margin: 0 auto;
+  position: absolute;
+  color: orange;
 }
 
 #degree {
   font-size: px;
   position: relative;
-  left: 67px;
-  top: 60px;
-  color: rgb(100, 0, 147);
+  left: 120px;
+  top: 1px;
+  color: orange;
 }
 
 .weather-box {
-  padding: 90px;
+  padding: 20px;
   border: solid black;
   border-radius: 20px;
   margin: 20px;
+  display: flex;
+  justify-content: center;
+  height: 250px;
 }
 .weather-boxes {
   display: flex;
   position: relative;
   top: 315px;
+  text-align: center;
   flex-direction: row;
   justify-content: center;
   margin-top: 20px;
 }
 
 .box-background {
-  background-color: white;
+  background-color: rgb(59,46,46);
   height: 650px;
   border-radius: 50px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 300px;
+  margin-right: 300px;
+  
 }
 
 .date {
   position: relative;
   bottom: 150px;
+  font-family: Blinker;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 50px;
+  color: white;
+
+}
+
+.htemp {
+  position: absolute;
+  top: 260px;
+  font-size: 30px;
+  color: orange;
+  font: Blinker;
 }
