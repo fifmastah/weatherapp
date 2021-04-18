@@ -1,24 +1,49 @@
 import { useState } from "react";
-  import { useEffect } from "react";
+import { useEffect } from "react";
 
 const Weather = (props) => {
   const [weatherState, setWeatherState] = useState([
-    { date: getMyDay(props.myWeather.data[0].datetime), htemp: celsToFahren(props.myWeather.data[0].max_temp)},
-    { date: getMyDay(props.myWeather.data[1].datetime), htemp: celsToFahren(props.myWeather.data[1].max_temp)},
-    { date: getMyDay(props.myWeather.data[2].datetime),htemp: celsToFahren(props.myWeather.data[2].max_temp)},
-    { date: getMyDay(props.myWeather.data[3].datetime) ,htemp: celsToFahren(props.myWeather.data[3].max_temp)},
-    { date: getMyDay(props.myWeather.data[4].datetime), htemp: celsToFahren(props.myWeather.data[4].max_temp)},
-    { date: getMyDay(props.myWeather.data[5].datetime), htemp: celsToFahren(props.myWeather.data[5].max_temp)},
-    { date: getMyDay(props.myWeather.data[6].datetime) ,htemp: celsToFahren(props.myWeather.data[6].max_temp)}
+    {
+      date: getMyDay(props.myWeather.data[0].datetime),
+      htemp: celsToFahren(props.myWeather.data[0].max_temp),
+      mtemp: celsToFahren(props.myWeather.data[0].max_temp),
+    },
+    {
+      date: getMyDay(props.myWeather.data[1].datetime),
+      htemp: celsToFahren(props.myWeather.data[1].max_temp),
+      mtemp: celsToFahren(props.myWeather.data[1].min_temp),
+    },
+    {
+      date: getMyDay(props.myWeather.data[2].datetime),
+      htemp: celsToFahren(props.myWeather.data[2].max_temp),
+      mtemp: celsToFahren(props.myWeather.data[2].min_temp),
+    },
+    {
+      date: getMyDay(props.myWeather.data[3].datetime),
+      htemp: celsToFahren(props.myWeather.data[3].max_temp),
+      mtemp: celsToFahren(props.myWeather.data[3].min_temp),
+    },
+    {
+      date: getMyDay(props.myWeather.data[4].datetime),
+      htemp: celsToFahren(props.myWeather.data[4].max_temp),
+      mtemp: celsToFahren(props.myWeather.data[4].min_temp),
+    },
+    {
+      date: getMyDay(props.myWeather.data[5].datetime),
+      htemp: celsToFahren(props.myWeather.data[5].max_temp),
+      mtemp: celsToFahren(props.myWeather.data[5].min_temp),
+    },
+    {
+      date: getMyDay(props.myWeather.data[6].datetime),
+      htemp: celsToFahren(props.myWeather.data[6].max_temp),
+      mtemp: celsToFahren(props.myWeather.data[6].min_temp),
+    },
   ]);
 
-
-
   function celsToFahren(cels) {
-    cels = (9*cels+(32*5))/5;
-    return (Math.round(cels));
+    cels = (9 * cels + 32 * 5) / 5;
+    return Math.round(cels);
   }
-
 
   function getMyDay(nums) {
     var newDay = new Date(nums);
@@ -36,21 +61,28 @@ const Weather = (props) => {
     } else if (realDay == 5) {
       return "Saturday";
     } else if (realDay == 6) {
-      return "Sunday"
+      return "Sunday";
     }
-
-
   }
   return (
     <div className="box-background">
+      <div className="current-weather-box">
+        <h1 className="name-state">
+          {props.myWeather.city_name}, &nbsp; {props.myWeather.state_code}{" "}
+        </h1>
+      </div>
       <div className="weather-boxes">
-        { weatherState.map((block) => {
+        {weatherState.map((block) => {
           return (
             <div className="weather-box">
               <i id="degree" className="far fa-circle"></i>
+              <i id="second-degree" className="far fa-circle"></i>
               <i id="weathericon" className="fas fa-cloud-rain"></i>
               <div className="date">{block.date}</div>
-              <div className="htemp">{block.htemp}</div>
+              <div className="htemp">
+                {block.htemp} &nbsp;
+                {block.mtemp}
+              </div>
             </div>
           );
         })}

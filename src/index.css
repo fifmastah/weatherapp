@@ -7,10 +7,11 @@
 #input-field {
   border-radius: 30px;
   border-width: 2px;
-  border-color: #ee0000;
+  border-color: white;
   border-style: solid;
   padding: 7px;
-  padding-left: 25px;
+  padding-left: 15px;
+  padding-right: 35px;
   height: 5px;
   z-index: -1;
   font-family: Blinker;
@@ -27,7 +28,7 @@
 #searchicon {
   z-index: 1;
   position: relative;
-  right: 65px;
+  right: -75px;
   top: -19px;
 }
 
@@ -48,7 +49,7 @@
 }
 
 #weathericon {
-  top: 60px;
+  top: 30px;
   font-size: 140px;
   margin: 0 auto;
   position: absolute;
@@ -56,21 +57,26 @@
 }
 
 #degree {
-  font-size: px;
-  position: relative;
-  left: 120px;
-  top: 1px;
+  font-size: 8px;
+  color: orange;
+}
+
+#second-degree {
+  font-size: 8px;
   color: orange;
 }
 
 .weather-box {
-  padding: 20px;
-  border: solid black;
+  padding: 120px;
   border-radius: 20px;
-  margin: 20px;
+  border: solid black;
+  margin: 5px;
   display: flex;
   justify-content: center;
-  height: 250px;
+}
+
+.weather-box:hover {
+  box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.2);
 }
 .weather-boxes {
   display: flex;
@@ -83,29 +89,35 @@
 }
 
 .box-background {
-  background-color: rgb(59,46,46);
+  background-color: rgb(170, 60, 0);
   height: 650px;
-  border-radius: 50px;
-  margin-left: 300px;
-  margin-right: 300px;
-  
 }
 
 .date {
-  position: relative;
-  bottom: 150px;
+  position: absolute;
+  bottom: 250px;
   font-family: Blinker;
   font-size: 30px;
   font-weight: bold;
-  padding: 50px;
+  padding: 20px;
   color: white;
-
 }
 
 .htemp {
   position: absolute;
-  top: 260px;
-  font-size: 30px;
+  top: 170px;
+  font-size: 80px;
   color: orange;
-  font: Blinker;
+  font-family: Blinker;
+}
+
+.current-weather-box {
+  display: flex;
+  font-family: Blinker;
+  color: white;
+}
+
+.name-state {
+  position: absolute;
+  font-size: 150px;
 }
